@@ -1,0 +1,20 @@
+[
+  {
+    "name": "python_app",
+    "image": "${image}",
+    "portMappings": [
+      {
+        "containerPort": 5000,
+        "hostPort": 5000
+      }
+    ],
+    "memory": 300,
+    "networkMode": "awsvpc",
+    "environment": [
+      {
+        "name": "PORT",
+        "value": "80"
+      }
+    ]
+  }
+]
