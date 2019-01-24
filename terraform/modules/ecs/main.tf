@@ -165,6 +165,7 @@ resource "aws_security_group" "ecs_service" {
 }
 
 data "aws_ecs_task_definition" "python_app" {
+    depends_on = ["aws_ecs_task_definition.python_app"]
     task_definition = "${aws_ecs_task_definition.python_app.family}"
 }
 
